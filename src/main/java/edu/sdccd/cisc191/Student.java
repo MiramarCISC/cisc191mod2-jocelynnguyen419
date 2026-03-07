@@ -28,12 +28,15 @@ public class Student {
     public double getGpa() {
         return gpa;
     }
+
+
     public int getId() {
         return id;
     }
 
     @Override
     public String toString() {
-        return "Student [name=" + name + ", gpa=" + gpa + ", id=" + id + "]";
+        return String.format("Student [name=%s, gpa=%.1f, id=%d]", name, gpa, id);
+        // changed method for formatting
     }
 }
