@@ -37,6 +37,6 @@ public class Student {
     @Override
     public String toString() {
         return String.format("Student [name=%s, gpa=%.1f, id=%d]", name, gpa, id);
-        // changed method for formatting
+        // changed method for formatting/
     }
 }

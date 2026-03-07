@@ -22,7 +22,7 @@ public class StudentAnalyzer {
     }
 
 
-    // added null checks before methods
+    // added null checks before method
     public static double averageGpa(List<Student> students) {
         if (students == null) throw new IllegalArgumentException("Students list cannot be null");
 
