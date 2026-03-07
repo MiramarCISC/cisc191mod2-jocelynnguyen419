@@ -6,6 +6,8 @@ import java.util.List;
 
 public class StudentAnalyzer {
     public static List<Student> filter(List<Student> students, StudentFilter filter) {
+        if (students == null) throw new IllegalArgumentException("Students list cannot be null");
+
         List<Student> result = new ArrayList<>();
         for (Student s : students) {
             if (filter.test(s)) {
@@ -19,7 +21,11 @@ public class StudentAnalyzer {
         students.sort(comparator);
     }
 
+
+    // added null checks before method
     public static double averageGpa(List<Student> students) {
+        if (students == null) throw new IllegalArgumentException("Students list cannot be null");
+
         if (students.isEmpty()) return 0.0;
 
         double total = 0;
